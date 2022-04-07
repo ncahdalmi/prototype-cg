@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Comment;
+use App\Models\Like;
 use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\User;
@@ -29,5 +30,6 @@ class DatabaseSeeder extends Seeder
         ]);
         Post::factory(20)->create();
         Comment::factory(100)->create();
+        Like::factory(500)->create();
     }
 }

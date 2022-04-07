@@ -23,7 +23,7 @@
         <ul style="width: 30%; list-style: none">
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Logo</a></li>
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/">Home</a></li>
-            <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Menfest</a></li>
+            <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/menfess">Menfess</a></li>
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Logout</a></li>
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px">
                 <a href="#">

@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -40,7 +41,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // protected $with = ['posts'];
+    public function disguise($name){
+        return "user" . Str::random(ceil(strlen($name)/4));
+    }
 
     public function posts()
     {
@@ -50,5 +53,13 @@ class User extends Authenticatable
     public function comments()
     {
         return $this->hasMany(Comment::class, 'comment_id');
+    }
+
+    public function likes(){
+        return $this->hasMany(Like::class, 'user_id');
+    }
+
+    public function media(){
+        return $this->hasMany(Media::class, 'user_id');
     }
 }
