@@ -23,20 +23,26 @@ Route::get('/home', function () {
     return view('home', [
         'title' => 'Home',
         'users' => User::all(),
-        'posts' => Post::where('post_category_id', 1)->get(),
+        'posts' => Post::where('post_category_id', 1)->latest()->get(),
         'comments' => Comment::all(),
         'likes' => Like::all()
     ]);
-})->middleware('auth');
+})->middleware('auth')->name('home');
 
-Route::get('/menfess', [PostController::class, 'allFess'])->middleware('auth');
+Route::get('/menfess', [PostController::class, 'allFess'])->middleware('auth')->name('menfess');
 Route::get('/menfess/{posts}', [PostController::class, 'showFess'])->middleware('auth');
 
 Route::get('/{author:username}/status', [PostController::class, 'all'])->middleware('auth');
 Route::get('/{author:username}/status/{posts}', [PostController::class, 'show'])->middleware('auth');
 
+// AUTHENTICATION
 Route::get('/', [AuthController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [AuthController::class, 'login'])->middleware('guest');
 Route::get('/register', [AuthController::class, 'regindex'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'register'])->middleware('guest');
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+
+// POSTS
+Route::post('/create', [PostController::class, 'create'])->middleware('auth');
+Route::delete('/delete', [PostController::class, 'destroy'])->middleware('auth'); //not user
+Route::post('/like', [PostController::class, 'like'])->middleware('auth');

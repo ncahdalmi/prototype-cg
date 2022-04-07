@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -47,6 +48,7 @@ class AuthController extends Controller
         ]);
 
         $validatedData['email_verified_at'] = now();
+        $validatedData['remember_token'] = Str::random(10);
         $validatedData['password'] = Hash::make($validatedData['password']);
 
         User::create($validatedData);

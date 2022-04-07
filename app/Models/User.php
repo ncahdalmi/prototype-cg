@@ -41,8 +41,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function disguise($name){
-        return "user" . Str::random(ceil(strlen($name)/4));
+    public function disguise($name)
+    {
+        return "user" . Str::random(ceil(strlen($name) / 4));
     }
 
     public function posts()
@@ -55,11 +56,13 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class, 'comment_id');
     }
 
-    public function likes(){
+    public function likes()
+    {
         return $this->hasMany(Like::class, 'user_id');
     }
 
-    public function media(){
+    public function media()
+    {
         return $this->hasMany(Media::class, 'user_id');
     }
 }

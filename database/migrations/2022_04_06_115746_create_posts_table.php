@@ -17,6 +17,7 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('subject')->nullable();
             $table->text('content');
             $table->string('post_code')->unique();
             $table->foreignId('user_id');
