@@ -13,17 +13,19 @@
     </div>
     @foreach ($posts as $post)
         <a style="margin: auto; display:block; color:black; text-decoration: none"
-            href="/{{ $post->author->username }}/status/{{ $post->post_code }}">
+            href="/{{ Request::is('menfess') ? 'menfess/'. $post->post_code : $post->author->username .'/status/' . $post->post_code }}">
             <div style="display: flex; align-items: center;justify-content: flex-start">
                 <div style="width:50px; height: 50px; background-color: aqua; margin-right: 10px"></div>
-                <p>{{ $post->author->name }}</p>
+                <p>{{ Request::is('menfess') ? $post->author->disguise($post->author->name) : $post->author->name }}</p>
             </div>
             <p>{{ $post->content }}</p>
             <div>
-                <small>Like 20</small>
+                <small>Like {{ count($likes->where('post_id', $post->id)) }}</small>
                 <small>Comment {{ count($comments->where('post_id', $post->id)) }}</small>
             </div>
-            <hr>
+            <br>
+            <div style="width: 100%; height: 1px; background-color: lightgray"></div>
+            <br>
         </a>
     @endforeach
 @endsection

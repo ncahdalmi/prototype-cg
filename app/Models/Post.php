@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Post extends Model
 {
@@ -27,5 +26,13 @@ class Post extends Model
     public function category()
     {
         return $this->belongsTo(PostCategory::class, 'post_category_id');
+    }
+
+    public function likes(){
+        return $this->hasMany(Like::class, 'post_id');
+    }
+
+    public function media(){
+        return $this->hasMany(Media::class, 'post_id');
     }
 }
