@@ -26,6 +26,20 @@
         <br>
         <div style="width: 100%; height: 1px; background-color: lightgray"></div>
         <br>
+        <div>
+            <form action="/comment" method="post">
+                @csrf
+                @method('POST')
+                <input type="hidden" name="post_id" value="{{ $post->id }}">
+                <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                <input style="display: block; width:100%; padding: 5px" type="text" name="content" placeholder="Comment"
+                    value="{{ old('content') }}">
+                <button type="submit">Comment</button>
+            </form>
+        </div>
+        <br>
+        <div style="width: 100%; height: 1px; background-color: lightgray"></div>
+        <br>
         <div id="comment-section">
             @foreach ($comments as $comment)
                 <div style="background-color: grey; margin-bottom: 5px; padding: 10px; border-bottom: 1px solid lightgray">

@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\PostController' => $baseDir . '/app/Http/Controllers/PostController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -20,6 +21,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\Comment' => $baseDir . '/app/Models/Comment.php',
+    'App\\Models\\Follow' => $baseDir . '/app/Models/Follow.php',
     'App\\Models\\Like' => $baseDir . '/app/Models/Like.php',
     'App\\Models\\Media' => $baseDir . '/app/Models/Media.php',
     'App\\Models\\Post' => $baseDir . '/app/Models/Post.php',
@@ -217,6 +219,7 @@ return array(
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
     'Database\\Factories\\CommentFactory' => $baseDir . '/database/factories/CommentFactory.php',
+    'Database\\Factories\\FollowFactory' => $baseDir . '/database/factories/FollowFactory.php',
     'Database\\Factories\\LikeFactory' => $baseDir . '/database/factories/LikeFactory.php',
     'Database\\Factories\\MediaFactory' => $baseDir . '/database/factories/MediaFactory.php',
     'Database\\Factories\\PostFactory' => $baseDir . '/database/factories/PostFactory.php',

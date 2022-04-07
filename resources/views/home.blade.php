@@ -32,8 +32,8 @@
             <p>{{ $post->content }}</p>
             <div>
                 <small style="font-weight:  {{ $post->isLike(auth()->user()->id, $post->id) ? 'bold' : 'inherit' }}">Like
-                    {{ count($likes->where('post_id', $post->id)) }}</small>
-                <small>Comment {{ count($comments->where('post_id', $post->id)) }}</small>
+                    {{ $post->likes->count() }}</small>
+                <small>Comment {{ $post->comments->count() }}</small>
                 @if (Request::is('menfess'))
                     <small>By {{ $post->author->disguise($post->author->name) }}</small>
                 @endif

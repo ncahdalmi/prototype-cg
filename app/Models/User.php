@@ -48,12 +48,12 @@ class User extends Authenticatable
 
     public function posts()
     {
-        return $this->hasMany(Post::class, 'post_id');
+        return $this->hasMany(Post::class, 'user_id');
     }
 
     public function comments()
     {
-        return $this->hasMany(Comment::class, 'comment_id');
+        return $this->hasMany(Comment::class, 'user_id');
     }
 
     public function likes()
@@ -64,5 +64,15 @@ class User extends Authenticatable
     public function media()
     {
         return $this->hasMany(Media::class, 'user_id');
+    }
+
+    public function follower()
+    {
+        return $this->hasMany(Follow::class, 'user_id');
+    }
+
+    public function following()
+    {
+        return $this->hasMany(Follow::class, 'followed_user_id');
     }
 }

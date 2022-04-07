@@ -46,3 +46,4 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 Route::post('/create', [PostController::class, 'create'])->middleware('auth');
 Route::delete('/delete', [PostController::class, 'destroy'])->middleware('auth'); //not user
 Route::post('/like', [PostController::class, 'like'])->middleware('auth');
+Route::post('/comment', [PostController::class, 'comment'])->middleware('auth');

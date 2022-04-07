@@ -22,7 +22,7 @@
     <div style="display: flex;">
         <ul style="width: 30%; list-style: none">
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Logo</a></li>
-            <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/">Home</a></li>
+            <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/home">Home</a></li>
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/menfess">Menfess</a></li>
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px">
                 <form action="/logout" method="POST">@csrf<button type="submit">Logout</button></a></form>

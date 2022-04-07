@@ -14,12 +14,9 @@ class PostController extends Controller
 {
     public function all(User $author)
     {
-        $posts = Post::where('user_id', $author->id)->get();
         return view('home', [
             'title' => 'Post by ' . $author->name,
-            'posts' => $posts,
-            'comments' => Comment::latest()->get(),
-            'likes' => Like::all()
+            'posts' => $author->posts()->where('post_category_id', 1)->latest()->get(),
         ]);
     }
     public function show(User $author, Post $posts)
@@ -28,8 +25,10 @@ class PostController extends Controller
             'title' => 'Post by @' . $author->username,
             'post' => $posts,
             'author' => $author,
-            'comments' => Comment::where('post_id', $posts->id)->latest()->get(),
-            'likes' => Like::where('post_id', $posts->id)->get()
+            // 'comments' => Comment::where('post_id', $posts->id)->latest()->get(),
+            'comments' => $posts->comments()->latest()->get(),
+            // 'likes' => Like::where('post_id', $posts->id)->get()
+            'likes' => $posts->likes()->get()
         ]);
     }
 
@@ -83,12 +82,24 @@ class PostController extends Controller
             'post_id' => 'required',
             'user_id' => 'required'
         ]);
-        if (Like::where('post_id', $validatedData['post_id'])->where('user_id', $validatedData['user_id'])->exists()) {
-            Like::where('post_id', $validatedData['post_id'])->where('user_id', $validatedData['user_id'])->delete();
+        $data = Like::where('post_id', $validatedData['post_id'])->where('user_id', $validatedData['user_id']);
+        if ($data->exists()) {
+            $data->delete();
             return redirect()->back()->with('error', 'You already liked this post');
         } else {
             Like::create($validatedData);
             return redirect()->back()->with('success', 'You liked this post');
         }
+    }
+
+    public function comment(Request $request)
+    {
+        $validatedData = $request->validate([
+            'post_id' => 'required',
+            'user_id' => 'required',
+            'content' => 'required'
+        ]);
+        Comment::create($validatedData);
+        return redirect()->back()->with('success', 'Comment created successfully');
     }
 }
