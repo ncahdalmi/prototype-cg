@@ -16,7 +16,7 @@
             href="/{{ Request::is('menfess') ? 'menfess/'. $post->post_code : $post->author->username .'/status/' . $post->post_code }}">
             <div style="display: flex; align-items: center;justify-content: flex-start">
                 <div style="width:50px; height: 50px; background-color: aqua; margin-right: 10px"></div>
-                <p>{{ Request::is('menfess') ? $post->author->disguise($post->author->name) : $post->author->name }}</p>
+                <p style="font-weight: bold">{{ Request::is('menfess') ? $post->author->disguise($post->author->name) : $post->author->name }}</p>
             </div>
             <p>{{ $post->content }}</p>
             <div>
