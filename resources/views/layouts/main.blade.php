@@ -24,7 +24,9 @@
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Logo</a></li>
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/">Home</a></li>
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/menfess">Menfess</a></li>
-            <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Logout</a></li>
+            <li style="margin-bottom: 5px; background-color: grey; padding: 10px">
+                <form action="/logout" method="POST">@csrf<button type="submit">Logout</button></a></form>
+            </li>
             <li style="margin-bottom: 5px; background-color: grey; padding: 10px">
                 <a href="#">
                     <button>Post</button>

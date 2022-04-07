@@ -5,6 +5,7 @@ use App\Models\Post;
 use App\Models\User;
 use App\Models\Comment;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 
 /*
@@ -18,7 +19,7 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home', [
         'title' => 'Home',
         'users' => User::all(),
@@ -26,10 +27,16 @@ Route::get('/', function () {
         'comments' => Comment::all(),
         'likes' => Like::all()
     ]);
-});
+})->middleware('auth');
 
-Route::get('/menfess', [PostController::class, 'allFess']);
-Route::get('/menfess/{posts}', [PostController::class, 'showFess']);
+Route::get('/menfess', [PostController::class, 'allFess'])->middleware('auth');
+Route::get('/menfess/{posts}', [PostController::class, 'showFess'])->middleware('auth');
 
-Route::get('/{author:username}/status', [PostController::class, 'all']);
-Route::get('/{author:username}/status/{posts}', [PostController::class, 'show']);
+Route::get('/{author:username}/status', [PostController::class, 'all'])->middleware('auth');
+Route::get('/{author:username}/status/{posts}', [PostController::class, 'show'])->middleware('auth');
+
+Route::get('/', [AuthController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/login', [AuthController::class, 'login'])->middleware('guest');
+Route::get('/register', [AuthController::class, 'regindex'])->middleware('guest');
+Route::post('/register', [AuthController::class, 'register'])->middleware('guest');
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');

@@ -24,7 +24,7 @@ class PostController extends Controller
     public function show(User $author, Post $posts)
     {
         return view('post', [
-            'title' => $posts->title,
+            'title' => 'Post by @' . $author->username,
             'post' => $posts,
             'author' => $author,
             'comments' => Comment::where('post_id', $posts->id)->get(),
@@ -43,7 +43,7 @@ class PostController extends Controller
 
     public function showFess(User $author, Post $posts){
         return view('post', [
-            'title' => $posts->title,
+            'title' => 'Discussion',
             'post' => $posts,
             'author' => $author,
             'comments' => Comment::where('post_id', $posts->id)->get(),
