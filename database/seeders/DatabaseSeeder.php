@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'menfest',
         ]);
         Post::factory(20)->create();
-        Comment::factory(100)->create();
+        // Comment::factory(100)->create();
         Like::factory(User::all()->count() * (Post::all()->count() * 20 / 100))->create();
         Follow::factory(User::all()->count() * (User::all()->count() * 50 / 100))->create();
     }

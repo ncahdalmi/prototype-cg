@@ -26,10 +26,9 @@ class PostController extends Controller
             'title' => 'Post by @' . $author->username,
             'post' => $posts,
             'author' => $author,
-            // 'comments' => Comment::where('post_id', $posts->id)->latest()->get(),
             'comments' => $posts->comments()->latest()->get(),
-            // 'likes' => Like::where('post_id', $posts->id)->get()
-            'likes' => $posts->likes()->get()
+            'likes' => $posts->likes()->get(),
+            'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
         ]);
     }
 
@@ -38,8 +37,7 @@ class PostController extends Controller
         return view('home', [
             'title' => "MenFess",
             'posts' => Post::where('post_category_id', 2)->latest()->get(),
-            'comments' => Comment::all(),
-            'likes' => Like::all()
+            'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
         ]);
     }
 
@@ -49,8 +47,9 @@ class PostController extends Controller
             'title' => 'Discussion',
             'post' => $posts,
             'author' => $author,
-            'comments' => Comment::where('post_id', $posts->id)->latest()->get(),
-            'likes' => Like::where('post_id', $posts->id)->get()
+            // 'comments' => Comment::where('commentable_id', $posts->id)->latest()->get(),
+            // 'likes' => Like::where('post_id', $posts->id)->get(),
+            'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
         ]);
     }
 
@@ -89,7 +88,10 @@ class PostController extends Controller
             $data->delete();
             return redirect()->back()->with('error', 'You already liked this post');
         } else {
-            Like::create($validatedData);
+            $like = new Like;
+            $like->post_id = $validatedData['post_id'];
+            $like->author()->associate(auth()->user());
+            $like->save();
             Notification::preventTwice('like', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
             return redirect()->back()->with('success', 'You liked this post');
         }
@@ -103,9 +105,36 @@ class PostController extends Controller
             'content' => 'required',
             'notif_trigger_user_id' => 'required'
         ]);
-        Comment::create($validatedData);
-        Notification::preventTwice('comment', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
 
+        $comment = new Comment;
+        $comment->content = $validatedData['content'];
+        $comment->author()->associate(auth()->user());
+
+        $post = Post::find($validatedData['post_id']);
+        $post->comments()->save($comment);
+
+        Notification::preventTwice('comment', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
         return redirect()->back()->with('success', 'Comment created successfully');
+    }
+
+    public function reply(Request $request)
+    {
+        $validatedData = $request->validate([
+            'post_id' => 'required',
+            'reply' => 'required',
+            'parent_id' => 'required',
+            'notif_trigger_user_id' => 'required'
+        ]);
+
+        $comment = new Comment;
+        $comment->content = $validatedData['reply'];
+        $comment->author()->associate(auth()->user());
+        $comment->parent_id = $validatedData['parent_id'];
+
+        $post = Post::find($validatedData['post_id']);
+        $post->comments()->save($comment);
+
+        Notification::preventTwice('reply', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
+        return redirect()->back()->with('success', 'Reply created successfully');
     }
 }

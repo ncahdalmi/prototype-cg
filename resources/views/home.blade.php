@@ -4,7 +4,7 @@
     <div>
         <div style="display: flex; align-items: center">
             <div style="width:50px; height: 50px; background-color: aqua; margin-right: 10px"></div>
-            <p>{{ auth()->user()->username }}</p>
+            <p>{{ auth()->user()->disguise(auth()->user()->username) }}</p>
         </div>
         <form action="/create" method="POST">
             @csrf
@@ -27,7 +27,7 @@
             <div style="display: flex; align-items: center;justify-content: flex-start">
                 <div style="width:50px; height: 50px; background-color: aqua; margin-right: 10px"></div>
                 <p style="font-weight: bold">
-                    {{ Request::is('menfess') ? $post->subject : $post->author->name }}</p>
+                    {{ Request::is('menfess*') ? $post->subject : $post->author->name }}</p>
             </div>
             <p>{{ $post->content }}</p>
             <div>

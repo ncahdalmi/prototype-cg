@@ -30,9 +30,9 @@ class Notification extends Model
         }
     }
 
-    public static function preventTwice($type, $from_user, $to_user_id, $post_id)
+    public static function preventTwice($type, $from_user, $to_user_id, $post_id, $isMenfess = false)
     {
-        if (!Notification::where('to_user_id', $to_user_id)->where('from_user_id', $from_user->id)->where('type', $type)->exists()) {
+        if (!Notification::where('to_user_id', $to_user_id)->where('from_user_id', $from_user->id)->where('type', $type)->exists() || $from_user->id != $to_user_id || $isMenfess) {
             Notification::create([
                 'to_user_id' => $to_user_id,
                 'from_user_id' => $from_user->id,
@@ -40,7 +40,9 @@ class Notification extends Model
                 'post_id' => $post_id,
                 'type' => $type
             ]);
+            return true;
         }
+        return false;
     }
 
     public function user()

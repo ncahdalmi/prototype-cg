@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('post_id');
+            $table->foreignId('parent_id')->nullable();
+            $table->foreignId('commentable_id');
+            $table->string('commentable_type');
             $table->text('content');
             $table->timestamps();
         });
