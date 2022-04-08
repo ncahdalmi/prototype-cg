@@ -6,7 +6,9 @@ use App\Models\User;
 use App\Models\Comment;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PostController;
+use App\Models\Notification;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +24,8 @@ use App\Http\Controllers\PostController;
 Route::get('/home', function () {
     return view('home', [
         'title' => 'Home',
-        'users' => User::all(),
         'posts' => Post::where('post_category_id', 1)->latest()->get(),
-        'comments' => Comment::all(),
-        'likes' => Like::all()
+        'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
     ]);
 })->middleware('auth')->name('home');
 
@@ -47,3 +47,7 @@ Route::post('/create', [PostController::class, 'create'])->middleware('auth');
 Route::delete('/delete', [PostController::class, 'destroy'])->middleware('auth'); //not user
 Route::post('/like', [PostController::class, 'like'])->middleware('auth');
 Route::post('/comment', [PostController::class, 'comment'])->middleware('auth');
+
+// NOTIFICATIONS
+
+// Route::get('/home', [NotificationController::class, 'index'])->middleware('auth');

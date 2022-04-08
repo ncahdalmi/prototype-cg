@@ -16,6 +16,7 @@
                     @method('POST')
                     <input type="hidden" name="post_id" value="{{ $post->id }}">
                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                    <input type="hidden" name="notif_trigger_user_id" value="{{ $post->author->id }}">
                     <button type="submit"
                         style="font-weight:  {{ $post->isLike(auth()->user()->id, $post->id) ? 'bold' : 'inherit' }}">Like
                         {{ count($likes->where('post_id', $post->id)) }}</button>
@@ -32,6 +33,8 @@
                 @method('POST')
                 <input type="hidden" name="post_id" value="{{ $post->id }}">
                 <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                <input type="hidden" name="notif_trigger_user_id" value="{{ $post->author->id }}">
                 <input style="display: block; width:100%; padding: 5px" type="text" name="content" placeholder="Comment"
                     value="{{ old('content') }}">
                 <button type="submit">Comment</button>

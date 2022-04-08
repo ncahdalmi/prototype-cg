@@ -10,6 +10,7 @@ class Follow extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+    protected $with = ['following', 'follower'];
 
     public function following()
     {
@@ -18,6 +19,6 @@ class Follow extends Model
 
     public function follower()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'whoami_user_id');
     }
 }

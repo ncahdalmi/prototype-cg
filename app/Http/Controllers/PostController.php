@@ -9,6 +9,7 @@ use App\Models\Comment;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Notification;
 
 class PostController extends Controller
 {
@@ -80,7 +81,8 @@ class PostController extends Controller
     {
         $validatedData = $request->validate([
             'post_id' => 'required',
-            'user_id' => 'required'
+            'user_id' => 'required',
+            'notif_trigger_user_id' => 'required'
         ]);
         $data = Like::where('post_id', $validatedData['post_id'])->where('user_id', $validatedData['user_id']);
         if ($data->exists()) {
@@ -88,6 +90,7 @@ class PostController extends Controller
             return redirect()->back()->with('error', 'You already liked this post');
         } else {
             Like::create($validatedData);
+            Notification::preventTwice('like', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
             return redirect()->back()->with('success', 'You liked this post');
         }
     }
@@ -97,9 +100,12 @@ class PostController extends Controller
         $validatedData = $request->validate([
             'post_id' => 'required',
             'user_id' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'notif_trigger_user_id' => 'required'
         ]);
         Comment::create($validatedData);
+        Notification::preventTwice('comment', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
+
         return redirect()->back()->with('success', 'Comment created successfully');
     }
 }

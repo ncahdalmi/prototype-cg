@@ -44,3 +44,7 @@
         </a>
     @endforeach
 @endsection
+
+@section('notifications')
+    @include('notifications')
+@endsection

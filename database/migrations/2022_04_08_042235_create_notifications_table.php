@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('follows', function (Blueprint $table) {
+        Schema::create('notifications', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('followed_user_id');
-            $table->foreignId('whoami_user_id');
-            $table->string('whoami_username');
+            $table->foreignId('to_user_id');
+            $table->foreignId('from_user_id');
+            $table->string('from_username');
+            $table->foreignId('post_id')->nullable();
+            $table->text('type');
+            $table->boolean('show')->default(true);
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('follows');
+        Schema::dropIfExists('notifications');
     }
 };

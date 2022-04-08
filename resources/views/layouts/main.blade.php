@@ -37,10 +37,7 @@
             @yield('content')
         </div>
         <div style="width: 35%;">
-            <h4>Notification</h4>
-            <div style="background-color: grey; margin-bottom: 5px; padding: 10px">Notif</div>
-            <div style="background-color: grey; margin-bottom: 5px; padding: 10px">Notif</div>
-            <div style="background-color: grey; margin-bottom: 5px; padding: 10px">Notif</div>
+            @yield('notifications')
         </div>
     </div>
 </body>
