@@ -4,7 +4,7 @@
     <div>
         <div style="display: flex; align-items: center">
             <div style="width:50px; height: 50px; background-color: aqua; margin-right: 10px"></div>
-            <p>{{ auth()->user()->disguise(auth()->user()->username) }}</p>
+            <p>{{ Request::is('menfess') ? auth()->user()->disguise(auth()->user()->username) : auth()->user()->username }}</p>
         </div>
         <form action="/create" method="POST">
             @csrf
@@ -12,6 +12,7 @@
             @if (Request::is('menfess'))
                 <input type="text" name="subject" placeholder="Subject">
             @endif
+            <input type="hidden" name="is_menfess" value="{{ Request::is('menfess*') ? true : false }}">
             <input type="text" placeholder="Apa yang kamu pikirkan"
                 style="padding: 10px; display:block; width:100%; margin-top:10px" name="content">
             <input type="hidden" name="post_category_id" value="{{ Request::is('menfess') ? 2 : 1 }}">

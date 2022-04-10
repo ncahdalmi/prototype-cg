@@ -13,6 +13,7 @@
                 <form action="/like" method="post">
                     @csrf
                     @method('POST')
+                    <input type="hidden" name="is_menfess" value="{{ Request::is('menfess*') ? true : false }}">
                     <input type="hidden" name="post_id" value="{{ $post->id }}">
                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                     <input type="hidden" name="notif_trigger_user_id" value="{{ $post->author->id }}">
@@ -31,6 +32,7 @@
                 @csrf
                 @method('POST')
                 <input type="hidden" name="post_id" value="{{ $post->id }}">
+                <input type="hidden" name="is_menfess" value="{{ Request::is('menfess*') ? true : false }}">
                 <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="notif_trigger_user_id" value="{{ $post->author->id }}">
