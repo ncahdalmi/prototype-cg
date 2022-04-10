@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use function PHPUnit\Framework\isFalse;
+
 class Notification extends Model
 {
     use HasFactory;
@@ -32,11 +34,12 @@ class Notification extends Model
 
     public static function preventTwice($type, $from_user, $to_user_id, $post_id, $isMenfess = false)
     {
-        if (!Notification::where('to_user_id', $to_user_id)->where('from_user_id', $from_user->id)->where('type', $type)->exists() || $from_user->id != $to_user_id || $isMenfess) {
+        $whoami = ($isMenfess == false) ? $from_user->username : 'Someone' ;
+        if (!Notification::where('to_user_id', $to_user_id)->where('from_user_id', $from_user->id)->where('type', $type)->exists() || $from_user->id != $to_user_id) {
             Notification::create([
                 'to_user_id' => $to_user_id,
                 'from_user_id' => $from_user->id,
-                'from_username' => $from_user->username,
+                'from_username' => $whoami,
                 'post_id' => $post_id,
                 'type' => $type
             ]);

@@ -92,7 +92,7 @@ class PostController extends Controller
             $like->post_id = $validatedData['post_id'];
             $like->author()->associate(auth()->user());
             $like->save();
-            Notification::preventTwice('like', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
+            Notification::preventTwice('like', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id'], $request->is_menfess);
             return redirect()->back()->with('success', 'You liked this post');
         }
     }
@@ -113,7 +113,7 @@ class PostController extends Controller
         $post = Post::find($validatedData['post_id']);
         $post->comments()->save($comment);
 
-        Notification::preventTwice('comment', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
+        Notification::preventTwice('comment', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id'], $request->is_menfess);
         return redirect()->back()->with('success', 'Comment created successfully');
     }
 
@@ -134,7 +134,7 @@ class PostController extends Controller
         $post = Post::find($validatedData['post_id']);
         $post->comments()->save($comment);
 
-        Notification::preventTwice('reply', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id']);
+        Notification::preventTwice('reply', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id'], $request->is_menfess);
         return redirect()->back()->with('success', 'Reply created successfully');
     }
 }

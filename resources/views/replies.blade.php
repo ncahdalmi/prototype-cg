@@ -3,6 +3,7 @@
         {{-- @dd($comment) --}}
         @csrf
         @method('POST')
+        <input type="hidden" name="is_menfess" value="{{ Request::is('menfess*') ? true : false }}">
         <input type="hidden" name="post_id" value="{{ $post_id }}">
         <input type="hidden" name="parent_id" value="{{ $comment->id }}">
         <input type="hidden" name="notif_trigger_user_id" value="{{ $comment->author->id }}">
