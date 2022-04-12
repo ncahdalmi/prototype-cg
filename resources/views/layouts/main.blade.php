@@ -20,19 +20,27 @@
 
 <body>
     <div style="display: flex;">
-        <ul style="width: 30%; list-style: none">
-            <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Logo</a></li>
-            <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/home">Home</a></li>
-            <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/menfess">Menfess</a></li>
-            <li style="margin-bottom: 5px; background-color: grey; padding: 10px">
-                <form action="/logout" method="POST">@csrf<button type="submit">Logout</button></a></form>
-            </li>
-            <li style="margin-bottom: 5px; background-color: grey; padding: 10px">
-                <a href="#">
-                    <button>Post</button>
-                </a>
-            </li>
-        </ul>
+
+        <div style="width: 30%">
+            <div>
+                <div style="width:30px;height:30px; border-radius:50%; background-color: aqua"></div>
+            </div>
+            <ul style="width: 100%; list-style: none">
+                <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Logo</a></li>
+                <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/home">Home</a></li>
+                <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="/menfess">Menfess</a>
+                </li>
+                <li style="margin-bottom: 5px; background-color: grey; padding: 10px">
+                    <form action="/logout" method="POST">@csrf<button type="submit">Logout</button></a></form>
+                </li>
+                <li style="margin-bottom: 5px; background-color: grey; padding: 10px">
+                    <a href="#">
+                        <button>Post</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
         <div style="width: 35%%; padding: 10px">
             @yield('content')
         </div>
