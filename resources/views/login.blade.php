@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 @section('content')
-    <div class="font-sans">
+    <div class="container m-10 sm:max-w-sm bg-slate-800">
         @if (session('success') && !Request::is('register'))
             {{ session('success') }}
         @endif
@@ -8,7 +8,7 @@
             {{ session('failed') }}
         @endif
         <form action="/{{ Request::is('register') ? 'register' : 'login' }}"
-            style="padding: 20px; margin-top: 20%; text-align: center" method="POST">
+            class="p-5 text-center" method="POST">
             @csrf
             @method('POST')
             <h3 style="text-align: center;">{{ Request::is('register') ? 'Register' : 'Login' }}</h3>
