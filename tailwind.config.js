@@ -7,12 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'purpink' : 'FC7AF8',
-        'primary-bg' : '06141D',
-        'secondary-bg' : '1B2730',
-        'extend-bg' : 'A4A9AC',
-        'primary-white' : 'FEFEFE',
-        'secondary-grey' : 'A4A9AC',
+        'purpink' : '#FC7AF8',
+        'primary' : '#06141D',
+        'secondary' : '#1B2730',
+        'extend-bg' : '#A4A9AC',
+        'primary-white' : '#FEFEFE',
+        'secondary-grey' : '#A4A9AC',
 
       },
       fontFamily: {
