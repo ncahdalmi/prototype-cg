@@ -3618,6 +3618,66 @@
             "install-path": "../phpunit/phpunit"
         },
         {
+            "name": "poldixd/laravel-feather",
+            "version": "9.1.0",
+            "version_normalized": "9.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/poldixd/laravel-feather.git",
+                "reference": "77663a22b8a9532471e28a7d506f7b181d621c38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/poldixd/laravel-feather/zipball/77663a22b8a9532471e28a7d506f7b181d621c38",
+                "reference": "77663a22b8a9532471e28a7d506f7b181d621c38",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0",
+                "php": "^8.0|^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.17|^7.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "time": "2022-03-30T08:54:21+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "poldixd\\LaravelFeather\\Providers\\LaravelFeatherServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "poldixd\\LaravelFeather\\": "src/LaravelFeather/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Poltmann",
+                    "email": "dev@nils.li"
+                }
+            ],
+            "keywords": [
+                "blade",
+                "feather",
+                "feather-icons",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/poldixd/laravel-feather/issues",
+                "source": "https://github.com/poldixd/laravel-feather"
+            },
+            "install-path": "../poldixd/laravel-feather"
+        },
+        {
             "name": "psr/container",
             "version": "2.0.2",
             "version_normalized": "2.0.2.0",

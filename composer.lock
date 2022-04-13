@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b687ee468c146df3e1e526f7371201d4",
+    "content-hash": "6fa8e4c46cea2472995a0cc757b2b5fb",
     "packages": [
         {
             "name": "brick/math",
@@ -2132,6 +2132,63 @@
                 }
             ],
             "time": "2021-12-04T23:24:31+00:00"
+        },
+        {
+            "name": "poldixd/laravel-feather",
+            "version": "9.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/poldixd/laravel-feather.git",
+                "reference": "77663a22b8a9532471e28a7d506f7b181d621c38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/poldixd/laravel-feather/zipball/77663a22b8a9532471e28a7d506f7b181d621c38",
+                "reference": "77663a22b8a9532471e28a7d506f7b181d621c38",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0",
+                "php": "^8.0|^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.17|^7.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "poldixd\\LaravelFeather\\Providers\\LaravelFeatherServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "poldixd\\LaravelFeather\\": "src/LaravelFeather/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Poltmann",
+                    "email": "dev@nils.li"
+                }
+            ],
+            "keywords": [
+                "blade",
+                "feather",
+                "feather-icons",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/poldixd/laravel-feather/issues",
+                "source": "https://github.com/poldixd/laravel-feather"
+            },
+            "time": "2022-03-30T08:54:21+00:00"
         },
         {
             "name": "psr/container",

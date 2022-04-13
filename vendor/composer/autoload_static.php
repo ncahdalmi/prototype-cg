@@ -41,6 +41,7 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         ),
         'p' => 
         array (
+            'poldixd\\LaravelFeather\\' => 23,
             'phpDocumentor\\Reflection\\' => 25,
         ),
         'W' => 
@@ -175,6 +176,10 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'poldixd\\LaravelFeather\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/poldixd/laravel-feather/src/LaravelFeather',
         ),
         'phpDocumentor\\Reflection\\' => 
         array (
@@ -514,6 +519,7 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\NotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/NotificationController.php',
         'App\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -5702,6 +5708,8 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
+        'poldixd\\LaravelFeather\\FeatherIcons' => __DIR__ . '/..' . '/poldixd/laravel-feather/src/LaravelFeather/FeatherIcons.php',
+        'poldixd\\LaravelFeather\\Providers\\LaravelFeatherServiceProvider' => __DIR__ . '/..' . '/poldixd/laravel-feather/src/LaravelFeather/Providers/LaravelFeatherServiceProvider.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 

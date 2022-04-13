@@ -15,14 +15,14 @@ class PostController extends Controller
 {
     public function all(User $author)
     {
-        return view('home', [
+        return view('user.home', [
             'title' => 'Post by ' . $author->name,
             'posts' => $author->posts()->where('post_category_id', 1)->latest()->get(),
         ]);
     }
     public function show(User $author, Post $posts)
     {
-        return view('post', [
+        return view('user.post', [
             'title' => 'Post by @' . $author->username,
             'post' => $posts,
             'author' => $author,
@@ -34,7 +34,7 @@ class PostController extends Controller
 
     public function allFess()
     {
-        return view('home', [
+        return view('user.home', [
             'title' => "MenFess",
             'posts' => Post::where('post_category_id', 2)->latest()->get(),
             'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
@@ -43,7 +43,7 @@ class PostController extends Controller
 
     public function showFess(User $author, Post $posts)
     {
-        return view('post', [
+        return view('user.post', [
             'title' => 'Discussion',
             'post' => $posts,
             'author' => $author,
@@ -138,10 +138,12 @@ class PostController extends Controller
         return redirect()->back()->with('success', 'Reply created successfully');
     }
 
-    public function follow(Request $request){
+    public function follow(Request $request)
+    {
         return $request;
     }
-    public function unfollow(Request $request){
+    public function unfollow(Request $request)
+    {
         return $request;
     }
 }
