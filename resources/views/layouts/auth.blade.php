@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CollegeGram | {{ Request::is('register') ? 'Register' : 'Login' }}</title>
+    @include('partials.font')
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
-<body>
-    {{-- <div style="width: 100%; height: 100vh; display:flex; align-items: center; justify-content: center">
-        <div style="width: 350px; min-height: 350px; background-color: lightslategray; border-radius: 20px;">
-            @yield('content')
-        </div>
-    </div> --}}
-
-    <div class="flex h-[100vh] justify-center items-center">
+<body class="font-poppins text-primary-white">
+    <div class="flex h-[100vh] w-full justify-center items-center bg-primary">
         @yield('content')
     </div>
+
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>
