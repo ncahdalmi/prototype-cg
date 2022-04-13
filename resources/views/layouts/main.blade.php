@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ $title }}</title>
   @include('partials.font')
+  @trixassets
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </head>

@@ -18,6 +18,7 @@ class PostController extends Controller
         return view('user.home', [
             'title' => 'Post by ' . $author->name,
             'posts' => $author->posts()->where('post_category_id', 1)->latest()->get(),
+            'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
         ]);
     }
     public function show(User $author, Post $posts)
@@ -63,6 +64,7 @@ class PostController extends Controller
         ]);
 
         $validatedData['post_code'] = Str::random(10);
+        // $validatedData['content'] = $request['post-trixFields']['content'];
         Post::create($validatedData);
         if ($validatedData['post_category_id'] == 1) {
             return redirect()->route('home')->with('success', 'Post created successfully');

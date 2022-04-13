@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '42deeaadc877cc3aaa9053baaa435f085f166241',
+        'reference' => '9f23b50436f6033c54fb6576720ba32893087b85',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -388,7 +388,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '42deeaadc877cc3aaa9053baaa435f085f166241',
+            'reference' => '9f23b50436f6033c54fb6576720ba32893087b85',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -1239,6 +1239,15 @@
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
             'reference' => '38358405ae948963c50a3aae3dfea598223ba15e',
+            'dev_requirement' => false,
+        ),
+        'te7a-houdini/laravel-trix' => array(
+            'pretty_version' => '2.0.6',
+            'version' => '2.0.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../te7a-houdini/laravel-trix',
+            'aliases' => array(),
+            'reference' => '52aa86853b9883e934ddb2938d3015e56e951a28',
             'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(

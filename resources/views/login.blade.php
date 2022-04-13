@@ -67,10 +67,8 @@
         </label>
       @endif
       <div class="text-right my-4">
-        <button type="submit"
-          class="py-2 px-4 bg-purpink rounded-2xl my-4 hover:brightness-75 hover:scale-95 transition-all group">
-          <span
-            class="group-hover:text-pink-900 transition-all">{{ Request::is('register') ? 'Register' : 'Login' }}</span>
+        <button type="submit" class="btn-primary group">
+          <span class="btn-primary__text">{{ Request::is('register') ? 'Register' : 'Login' }}</span>
         </button>
         @if (!Request::is('register'))
           <small class="block">Not registered? <a href="/register"
