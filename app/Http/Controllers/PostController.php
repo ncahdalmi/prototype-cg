@@ -137,4 +137,11 @@ class PostController extends Controller
         Notification::preventTwice('reply', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id'], $request->is_menfess);
         return redirect()->back()->with('success', 'Reply created successfully');
     }
+
+    public function follow(Request $request){
+        return $request;
+    }
+    public function unfollow(Request $request){
+        return $request;
+    }
 }

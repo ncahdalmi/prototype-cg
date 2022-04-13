@@ -44,7 +44,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 // POSTS
 Route::post('/create', [PostController::class, 'create'])->middleware('auth');
-Route::delete('/delete', [PostController::class, 'destroy'])->middleware('auth'); //not user
+Route::delete('/delete', [PostController::class, 'destroy'])->middleware('auth'); //not used
 Route::post('/like', [PostController::class, 'like'])->middleware('auth');
 Route::post('/comment', [PostController::class, 'comment'])->middleware('auth')->name('post.comment');
 Route::post('/reply', [PostController::class, 'reply'])->middleware('auth')->name('comment.reply');
+Route::post('/follow', [PostController::class, 'follow'])->middleware('auth')->name('follow');
+Route::post('/unfollow', [PostController::class, 'unfollow'])->middleware('auth')->name('unfollow');
