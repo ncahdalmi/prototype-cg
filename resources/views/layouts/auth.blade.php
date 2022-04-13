@@ -16,7 +16,7 @@
         </div>
     </div> --}}
 
-    <div class="flex justify-center items-center">
+    <div class="flex h-[100vh] justify-center items-center">
         @yield('content')
     </div>
 </body>
