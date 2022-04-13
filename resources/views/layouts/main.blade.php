@@ -24,6 +24,10 @@
         <div style="width: 30%">
             <div>
                 <div style="width:30px;height:30px; border-radius:50%; background-color: aqua"></div>
+                <p>{{ auth()->user()->name }}</p>
+                <div style="display: flex">
+                    <p>{{ auth()->user()->name }}</p>
+                </div>
             </div>
             <ul style="width: 100%; list-style: none">
                 <li style="margin-bottom: 5px; background-color: grey; padding: 10px"><a href="#">Logo</a></li>
