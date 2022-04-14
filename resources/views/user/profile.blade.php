@@ -1,11 +1,38 @@
 @extends('layouts.main')
 
 @section('content')
-   <div>
-      @include('partials.posting')
+   <div class="bg-secondary pb-10">
+      <div class="w-full relative flex flex-col mb-10">
+         <div class="h-32 bg-gradient-to-r from-sky-500 to-indigo-500"></div>
+         <img src="{{ asset('img/' . $author->avatar) }}" alt="{{ $author->name }}"
+            class="rounded-full w-[20%] absolute left-1/2 -translate-x-1/2 top-3/4 -translate-y-1/3 sm:-translate-y-3/4 sm:w-[10%]">
+      </div>
+      <div class="text-center">
+         <p class="capitalize ">{{ $author->name }}</p>
+         <small class="text-secondary-grey">
+            <span>@</span>
+            <span>{{ $author->username }}</span>
+         </small>
+         <div class="flex">
+            <div class="w-1/2">
+               <p class="text-xs text-secondary-grey flex flex-col">
+                  <span class="text-3xl text-primary-white font-semibold">{{ $author->following->count() }}</span>
+                  <span>Following</span>
+               </p>
+            </div>
+            <div class="w-1/2">
+               <p class="text-xs text-secondary-grey flex flex-col">
+                  <span class="text-3xl text-primary-white font-semibold">{{ $author->follower->count() }}</span>
+                  <span>Followers</span>
+               </p>
+            </div>
+            <div class="flex">
+
+            </div>
+         </div>
+      </div>
    </div>
    <div class="">
-
       @foreach ($posts as $post)
          <div class="relative bg-secondary m-2 p-2 pb-8 block rounded-2xl">
             <div class="abosolute flex items-center p-4 z-10">

@@ -15,8 +15,9 @@ class PostController extends Controller
 {
     public function all(User $author)
     {
-        return view('user.home', [
+        return view('user.profile', [
             'title' => 'Post by ' . $author->name,
+            'author' => $author,
             'posts' => $author->posts()->where('post_category_id', 1)->latest()->get(),
             'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
         ]);
@@ -138,6 +139,14 @@ class PostController extends Controller
 
         Notification::preventTwice('reply', auth()->user(), $validatedData['notif_trigger_user_id'], $validatedData['post_id'], $request->is_menfess);
         return redirect()->back()->with('success', 'Reply created successfully');
+    }
+
+    public function unshow_notif(Request $request)
+    {
+        $notif = Notification::find($request->notif_id);
+        $notif->show = false;
+        $notif->save();
+        return redirect()->back();
     }
 
     public function follow(Request $request)

@@ -1,13 +1,23 @@
 @foreach ($replies as $reply)
-  <div
-    style="background-color: grey; margin-left:20px margin-bottom: 5px; padding: 10px; border-bottom: 1px solid lightgray">
-    <div style="display: flex; align-items: center;justify-content: flex-start">
-      <div style="width:50px; height: 50px; background-color: aqua; margin-right: 10px"></div>
-      <p style="font-weight: bold">
-        {{ Request::is('menfess*') ? $reply->author->disguise($reply->author->name) : $reply->author->name }}
-      </p>
-    </div>
-    <p>{{ $reply->content }}</p>
-  </div>
-  @include('partials.replies')
+   <div class="bg-secondary-2 rounded-2xl my-2 pb-2">
+      <div class="abosolute flex items-center p-4 z-10">
+         <img src="{{ asset('img/' . $reply->author->avatar) }}" alt="{{ $reply->author->username }}"
+            class="w-10 block rounded-full mr-4 shadow-sm">
+         <div>
+            <p class="flex flex-col">
+               <span class="mr-2">
+                  {{ Request::is('menfess') ? $reply->author->disguise($reply->author->username) : $reply->author->name }}
+               </span>
+               <a href="/{{ $reply->author->username }}/status" class="text-secondary-grey text-xs">
+                  <span>@</span>{{ $reply->author->username }}
+               </a>
+            </p>
+            <p class="text-xs text-secondary-grey">{{ $reply->created_at->diffForhumans() }}</p>
+         </div>
+      </div>
+      <div class="ml-[4.5rem] text-justify mr-10">
+         <small>{!! $reply->content !!}</small>
+         @include('partials.replies', ['comment' => $comment, 'post_id' => $post->id])
+      </div>
+   </div>
 @endforeach
