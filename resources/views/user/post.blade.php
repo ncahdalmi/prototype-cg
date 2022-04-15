@@ -86,7 +86,8 @@
       </div>
       <div id="comment-section" class="p-2">
          <h2 class="font-semibold">Replies..</h2>
-         @foreach ($post->comments as $comment)
+         @foreach ($post->comments()->latest()->get()
+       as $comment)
             <div class="bg-secondary my-2">
                <div>
                   <div class="abosolute flex items-center p-4 z-10">
@@ -109,7 +110,7 @@
                   <small class="text-[10px !important]">{!! $comment->content !!}</small>
                   @include('partials.replies', ['comment' => $comment, 'post_id' => $post->id])
                   @include('partials.reply', [
-                      'replies' => $comment->replies,
+                      'replies' => $comment->replies()->get(),
                       'comment' => $comment,
                       'post_id' => $post->id,
                   ])

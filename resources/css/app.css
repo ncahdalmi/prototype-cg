@@ -15,5 +15,11 @@
     .btn-primary__text {
         @apply group-hover:text-pink-900 transition-all;
     }
+    .btn-secondary {
+        @apply bg-secondary-2 text-secondary-grey font-semibold px-2 py-1 mx-2 rounded-full transition-all hover:bg-secondary-grey hover:text-secondary-2 hover:scale-90;
+    }
+    .btn-secondary__active {
+        @apply bg-secondary-grey text-secondary-2 hover:bg-secondary-2 hover:text-secondary-grey;
+    }
 }
 @tailwind utilities;
