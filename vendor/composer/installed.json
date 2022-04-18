@@ -3618,6 +3618,66 @@
             "install-path": "../phpunit/phpunit"
         },
         {
+            "name": "poldixd/laravel-feather",
+            "version": "9.1.0",
+            "version_normalized": "9.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/poldixd/laravel-feather.git",
+                "reference": "77663a22b8a9532471e28a7d506f7b181d621c38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/poldixd/laravel-feather/zipball/77663a22b8a9532471e28a7d506f7b181d621c38",
+                "reference": "77663a22b8a9532471e28a7d506f7b181d621c38",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0",
+                "php": "^8.0|^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.17|^7.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "time": "2022-03-30T08:54:21+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "poldixd\\LaravelFeather\\Providers\\LaravelFeatherServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "poldixd\\LaravelFeather\\": "src/LaravelFeather/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Poltmann",
+                    "email": "dev@nils.li"
+                }
+            ],
+            "keywords": [
+                "blade",
+                "feather",
+                "feather-icons",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/poldixd/laravel-feather/issues",
+                "source": "https://github.com/poldixd/laravel-feather"
+            },
+            "install-path": "../poldixd/laravel-feather"
+        },
+        {
             "name": "psr/container",
             "version": "2.0.2",
             "version_normalized": "2.0.2.0",
@@ -7785,6 +7845,66 @@
                 }
             ],
             "install-path": "../symfony/var-dumper"
+        },
+        {
+            "name": "te7a-houdini/laravel-trix",
+            "version": "2.0.6",
+            "version_normalized": "2.0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amaelftah/laravel-trix.git",
+                "reference": "52aa86853b9883e934ddb2938d3015e56e951a28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amaelftah/laravel-trix/zipball/52aa86853b9883e934ddb2938d3015e56e951a28",
+                "reference": "52aa86853b9883e934ddb2938d3015e56e951a28",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.8.0|~6.0|~7.0|~8.0|~9.0",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.5|~4.0|~5.0|~6.0"
+            },
+            "time": "2022-02-14T13:23:06+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Te7aHoudini\\LaravelTrix\\LaravelTrixServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Te7aHoudini\\LaravelTrix\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ahmed Abd El Ftah",
+                    "email": "ahmedabdelftah95165@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "trix editor for laravel inspired by ActionText for rails",
+            "homepage": "https://github.com/te7ahoudini/laravel-trix",
+            "keywords": [
+                "laravel-trix",
+                "te7a-houdini"
+            ],
+            "support": {
+                "issues": "https://github.com/amaelftah/laravel-trix/issues",
+                "source": "https://github.com/amaelftah/laravel-trix/tree/2.0.6"
+            },
+            "install-path": "../te7a-houdini/laravel-trix"
         },
         {
             "name": "theseer/tokenizer",

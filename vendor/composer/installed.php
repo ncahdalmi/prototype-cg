@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '9f23b50436f6033c54fb6576720ba32893087b85',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -383,12 +383,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '9f23b50436f6033c54fb6576720ba32893087b85',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -657,6 +657,15 @@
             'aliases' => array(),
             'reference' => '12bc8879fb65aef2138b26fc633cb1e3620cffba',
             'dev_requirement' => true,
+        ),
+        'poldixd/laravel-feather' => array(
+            'pretty_version' => '9.1.0',
+            'version' => '9.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../poldixd/laravel-feather',
+            'aliases' => array(),
+            'reference' => '77663a22b8a9532471e28a7d506f7b181d621c38',
+            'dev_requirement' => false,
         ),
         'psr/container' => array(
             'pretty_version' => '2.0.2',
@@ -1230,6 +1239,15 @@
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
             'reference' => '38358405ae948963c50a3aae3dfea598223ba15e',
+            'dev_requirement' => false,
+        ),
+        'te7a-houdini/laravel-trix' => array(
+            'pretty_version' => '2.0.6',
+            'version' => '2.0.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../te7a-houdini/laravel-trix',
+            'aliases' => array(),
+            'reference' => '52aa86853b9883e934ddb2938d3015e56e951a28',
             'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(

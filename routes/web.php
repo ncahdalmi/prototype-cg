@@ -22,7 +22,7 @@ use App\Models\Notification;
 */
 
 Route::get('/home', function () {
-    return view('home', [
+    return view('user.home', [
         'title' => 'Home',
         'posts' => Post::where('post_category_id', 1)->latest()->get(),
         'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
