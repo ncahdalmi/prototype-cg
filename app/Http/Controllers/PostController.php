@@ -15,7 +15,6 @@ class PostController extends Controller
 {
     public function all(User $author)
     {
-
         return view('user.profile', [
             'title' => 'Post by ' . $author->name,
             'author' => $author,
