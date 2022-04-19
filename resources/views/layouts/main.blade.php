@@ -15,7 +15,7 @@
 <body class="font-poppins bg-primary text-primary-white">
   <div class="hidden"></div>
   <div class="grid">
-    <div class="z-50 fixed bg-primary h-[50px] w-full">
+    <div class="z-50 fixed bg-primary h-[50px] w-full md:hidden">
       <header class="flex items-center justify-between relative">
         <div class="flex items-center px-4">
           <button class="block absolute mt-2 left-4" id="hamburger" name="hamburger" type="button">
@@ -56,7 +56,7 @@
     <div>
       @yield('notifications')
     </div>
-    <div class="z-30">
+    <div class="z-30 md:hidden">
       <nav class="fixed bottom-0 inset-x-0 bg-primary h-[50px] flex justify-between">
         <a href="" class="ease-linear"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" 
           class="fill-purpink w-9 h-9 mt-2 ml-5 hover:fill-darkpink hover:-translate-y-2 hover:duration-700">
