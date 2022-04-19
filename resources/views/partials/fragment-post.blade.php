@@ -7,7 +7,8 @@
             <span class="mr-2">
                {{ Request::is('menfess') ? $post->author->disguise($post->author->username) : $post->author->name }}
             </span>
-            <a href="/{{ $post->author->username }}/status" class="text-secondary-grey text-xs">
+            <a href="/{{ $post->author->username }}/status"
+               class="text-secondary-grey text-xs {{ Route::is('menfess*') ? 'hidden' : null }}">
                <span>@</span>{{ $post->author->username }}
             </a>
          </p>
@@ -52,9 +53,9 @@
                <span
                   class="bg-white text-primary -ml-2 rounded-r-full min-w-[2rem] text-right px-2">{{ $post->comments->count() >= 1000 ? $post->comments->count() / 1000 . 'k' : $post->comments->count() }}</span>
             </small>
-            @if (Request::is('menfess'))
+            {{-- @if (Request::is('menfess*'))
                <small>By {{ $post->author->disguise($post->author->name) }}</small>
-            @endif
+            @endif --}}
          </div>
       </div>
    </a>

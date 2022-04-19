@@ -30,9 +30,9 @@ Route::get('/home', function () {
 })->middleware('auth')->name('home');
 
 Route::get('/menfess', [PostController::class, 'allFess'])->middleware('auth')->name('menfess');
-Route::get('/menfess/{posts}', [PostController::class, 'showFess'])->middleware('auth');
+Route::get('/menfess/{posts}', [PostController::class, 'showFess'])->middleware('auth')->name('menfess.show');
 
-Route::get('/{author:username}/status', [PostController::class, 'all'])->middleware('auth');
+Route::get('/{author:username}/status', [PostController::class, 'all'])->middleware('auth')->name('user.status');
 Route::get('/{author:username}/status/{posts}', [PostController::class, 'show'])->middleware('auth');
 
 // AUTHENTICATION
@@ -40,7 +40,7 @@ Route::get('/', [AuthController::class, 'index'])->middleware('guest')->name('lo
 Route::post('/login', [AuthController::class, 'login'])->middleware('guest');
 Route::get('/register', [AuthController::class, 'regindex'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'register'])->middleware('guest');
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
 
 // POSTS
 Route::post('/create', [PostController::class, 'create'])->middleware('auth');

@@ -16,7 +16,7 @@
 
 
 @section('sidebar-row-1')
-   @include('partials.profile', ['author' => auth()->user()])
+   @includeWhen(!Route::is('menfess'), 'partials.profile', ['author' => auth()->user()])
 @endsection
 
 @section('sidebar-row-2')

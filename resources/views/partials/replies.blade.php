@@ -1,4 +1,4 @@
-<div>
+<div class="pb-2">
    <form action="{{ route('comment.reply') }}" method="post">
       {{-- @dd($comment) --}}
       @csrf

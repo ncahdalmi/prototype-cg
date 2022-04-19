@@ -7,7 +7,7 @@
             <span class="block text-xl">
                {{ Request::is('menfess')? auth()->user()->disguise(auth()->user()->username): auth()->user()->name }}
             </span>
-            <small class="block m-0">
+            <small class="block m-0 {{ Route::is('menfess*') ? 'hidden' : null }}">
                <span>@</span>{{ auth()->user()->username }}
             </small>
          </p>
