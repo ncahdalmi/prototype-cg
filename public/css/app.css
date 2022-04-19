@@ -925,10 +925,6 @@ trix-toolbar {
   --tw-gradient-to: #6366f1;
 }
 
-.fill-current {
-  fill: currentColor;
-}
-
 .p-5 {
   padding: 1.25rem;
 }
