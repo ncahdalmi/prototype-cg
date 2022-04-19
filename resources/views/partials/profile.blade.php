@@ -2,7 +2,7 @@
    <div class="w-full relative flex flex-col mb-10">
       <div class="h-32 bg-gradient-to-r from-sky-500 to-indigo-500"></div>
       <img src="{{ asset('img/' . $author->avatar) }}" alt="{{ $author->name }}"
-         class="rounded-full w-[20%] absolute left-1/2 -translate-x-1/2 top-3/4 -translate-y-1/3 sm:-translate-y-3/4 sm:w-[10%]">
+         class="rounded-full w-[20%] absolute left-1/2 -translate-x-1/2 top-3/4 -translate-y-1/3 sm:-translate-y-3/4 sm:w-[10%] md:w-[25%]">
    </div>
    <div class="text-center">
       <p class="capitalize ">{{ $author->name }}</p>
@@ -24,7 +24,7 @@
             </p>
          </div>
       </div>
-      <div class="flex justify-center mt-10">
+      <div class="flex justify-center mt-10 {{ Request::is('home') ? 'hidden' : null }}">
          <a href="/{{ $author->username }}/status"
             class="btn-secondary {{ Request::get('data') == null ? 'btn-secondary__active' : null }}">Post</a>
          <a href="?data=media"

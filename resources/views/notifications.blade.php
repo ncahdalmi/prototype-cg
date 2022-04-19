@@ -1,4 +1,4 @@
-<div class="bg-secondary p-2 rounded-2xl my-2">
+<div class="bg-secondary p-2 rounded-2xl h-80 w-full">
    <h3 class="font-semibold">Notifications.</h3>
    <div>
       @foreach ($notifs->where('show', true) as $notif)

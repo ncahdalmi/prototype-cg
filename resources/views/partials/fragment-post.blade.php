@@ -1,4 +1,4 @@
-<div class="relative bg-secondary m-2 p-2 pb-8 block rounded-2xl">
+<div class="relative bg-secondary my-2 p-2 pb-8 block rounded-2xl">
    <div class="abosolute flex items-center p-4 z-10">
       <img src="{{ asset('img/' . $post->author->avatar) }}" alt="{{ $post->author->username }}"
          class="w-10 block rounded-full mr-4 shadow-sm">
