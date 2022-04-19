@@ -47,6 +47,7 @@ Route::post('/create', [PostController::class, 'create'])->middleware('auth');
 Route::delete('/delete', [PostController::class, 'destroy'])->middleware('auth'); //not used
 Route::post('/like', [PostController::class, 'like'])->middleware('auth');
 Route::post('/comment', [PostController::class, 'comment'])->middleware('auth')->name('post.comment');
+Route::post('/unshow-notif', [PostController::class, 'unshow_notif'])->middleware('auth')->name('notif.unshow');
 Route::post('/reply', [PostController::class, 'reply'])->middleware('auth')->name('comment.reply');
 Route::post('/follow', [PostController::class, 'follow'])->middleware('auth')->name('follow');
 Route::post('/unfollow', [PostController::class, 'unfollow'])->middleware('auth')->name('unfollow');

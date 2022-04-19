@@ -9,7 +9,6 @@
   @include('partials.font')
   @trixassets
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
 </head>
 
 <body class="font-poppins bg-primary text-primary-white">
@@ -47,8 +46,8 @@
       </header>
     </div>
     <div>
-      @yield('profile')
-      @yield('updates')
+      @yield('sidebar-row-1')
+      @yield('sidebar-row-2')
     </div>
     <div>
       @yield('content')
@@ -87,6 +86,7 @@
         navMenu.classList.toggle('hidden');
     });
   </script>
+
 </body>
 
 </html>
