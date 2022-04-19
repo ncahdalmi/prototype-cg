@@ -21,5 +21,19 @@
     .btn-secondary__active {
         @apply bg-secondary-grey text-secondary-2 hover:bg-secondary-2 hover:text-secondary-grey;
     }
+    .hamburger-line{
+      @apply w-[30px] h-[2px] my-2 mr-3 block bg-purpink;
+    }
+    .hamburger-active > span:nth-child(1){
+        @apply rotate-[41.5deg];
+    }
+    .hamburger-active > span:nth-child(2){
+        @apply scale-0;
+    }
+    .hamburger-active > span:nth-child(3){
+        @apply -rotate-[41.5deg];
+    }
+  
 }
+@tailwind utilities;
 @tailwind utilities;

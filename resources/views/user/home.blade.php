@@ -1,5 +1,4 @@
 @extends('layouts.main')
-
 @section('content')
    <div>
       @include('partials.posting')
@@ -14,6 +13,7 @@
 @section('notifications')
    @include('notifications')
 @endsection
+
 
 @section('sidebar-row-1')
    @include('partials.profile', ['author' => auth()->user()])
