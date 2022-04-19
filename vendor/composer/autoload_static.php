@@ -7,30 +7,30 @@ namespace Composer\Autoload;
 class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
 {
     public static $files = array (
+        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
-        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
         'c7a3c339e7e14b60e06a2d7fcce9476b' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Events/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
     );
 
@@ -41,6 +41,7 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         ),
         'p' => 
         array (
+            'poldixd\\LaravelFeather\\' => 23,
             'phpDocumentor\\Reflection\\' => 25,
         ),
         'W' => 
@@ -52,6 +53,7 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tests\\' => 6,
+            'Te7aHoudini\\LaravelTrix\\' => 24,
         ),
         'S' => 
         array (
@@ -176,6 +178,10 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
         ),
+        'poldixd\\LaravelFeather\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/poldixd/laravel-feather/src/LaravelFeather',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -197,6 +203,10 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         'Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
+        ),
+        'Te7aHoudini\\LaravelTrix\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src',
         ),
         'Symfony\\Polyfill\\Php81\\' => 
         array (
@@ -512,7 +522,9 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\NotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/NotificationController.php',
         'App\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -524,8 +536,10 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Comment' => __DIR__ . '/../..' . '/app/Models/Comment.php',
+        'App\\Models\\Follow' => __DIR__ . '/../..' . '/app/Models/Follow.php',
         'App\\Models\\Like' => __DIR__ . '/../..' . '/app/Models/Like.php',
         'App\\Models\\Media' => __DIR__ . '/../..' . '/app/Models/Media.php',
+        'App\\Models\\Notification' => __DIR__ . '/../..' . '/app/Models/Notification.php',
         'App\\Models\\Post' => __DIR__ . '/../..' . '/app/Models/Post.php',
         'App\\Models\\PostCategory' => __DIR__ . '/../..' . '/app/Models/PostCategory.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -721,8 +735,10 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\CommentFactory' => __DIR__ . '/../..' . '/database/factories/CommentFactory.php',
+        'Database\\Factories\\FollowFactory' => __DIR__ . '/../..' . '/database/factories/FollowFactory.php',
         'Database\\Factories\\LikeFactory' => __DIR__ . '/../..' . '/database/factories/LikeFactory.php',
         'Database\\Factories\\MediaFactory' => __DIR__ . '/../..' . '/database/factories/MediaFactory.php',
+        'Database\\Factories\\NotificationFactory' => __DIR__ . '/../..' . '/database/factories/NotificationFactory.php',
         'Database\\Factories\\PostFactory' => __DIR__ . '/../..' . '/database/factories/PostFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
@@ -5560,6 +5576,16 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
         'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
         'Symfony\\Polyfill\\Php81\\Php81' => __DIR__ . '/..' . '/symfony/polyfill-php81/Php81.php',
+        'Te7aHoudini\\LaravelTrix\\Http\\Controllers\\TrixAttachmentController' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/Http/Controllers/TrixAttachmentController.php',
+        'Te7aHoudini\\LaravelTrix\\LaravelTrix' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/LaravelTrix.php',
+        'Te7aHoudini\\LaravelTrix\\LaravelTrixServiceProvider' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/LaravelTrixServiceProvider.php',
+        'Te7aHoudini\\LaravelTrix\\Models\\TrixAttachment' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/Models/TrixAttachment.php',
+        'Te7aHoudini\\LaravelTrix\\Models\\TrixRichText' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/Models/TrixRichText.php',
+        'Te7aHoudini\\LaravelTrix\\Pipes\\AttachmentInput' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/Pipes/AttachmentInput.php',
+        'Te7aHoudini\\LaravelTrix\\Pipes\\Input' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/Pipes/Input.php',
+        'Te7aHoudini\\LaravelTrix\\Pipes\\Styles' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/Pipes/Styles.php',
+        'Te7aHoudini\\LaravelTrix\\Pipes\\TrixEditor' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/Pipes/TrixEditor.php',
+        'Te7aHoudini\\LaravelTrix\\Traits\\HasTrixRichText' => __DIR__ . '/..' . '/te7a-houdini/laravel-trix/src/Traits/HasTrixRichText.php',
         'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
@@ -5697,6 +5723,8 @@ class ComposerStaticInitf99dd8ae81d9882deeafc683f035ca06
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
+        'poldixd\\LaravelFeather\\FeatherIcons' => __DIR__ . '/..' . '/poldixd/laravel-feather/src/LaravelFeather/FeatherIcons.php',
+        'poldixd\\LaravelFeather\\Providers\\LaravelFeatherServiceProvider' => __DIR__ . '/..' . '/poldixd/laravel-feather/src/LaravelFeather/Providers/LaravelFeatherServiceProvider.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 

@@ -10,7 +10,10 @@
         "itsgoingd/clockwork": "^5.1",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "nesbot/carbon": "^2.57",
+        "poldixd/laravel-feather": "^9.1",
+        "te7a-houdini/laravel-trix": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

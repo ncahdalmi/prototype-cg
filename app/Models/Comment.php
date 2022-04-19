@@ -10,6 +10,7 @@ class Comment extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+    protected $with = ['author', 'post'];
 
     public function post()
     {
@@ -19,5 +20,10 @@ class Comment extends Model
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(Comment::class, 'parent_id');
     }
 }

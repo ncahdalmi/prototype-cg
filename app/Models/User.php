@@ -41,25 +41,43 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function disguise($name){
-        return "user" . Str::random(ceil(strlen($name)/4));
+    public function disguise($name)
+    {
+        return "user" . Str::random(ceil(strlen($name) / 4));
     }
 
     public function posts()
     {
-        return $this->hasMany(Post::class, 'post_id');
+        return $this->hasMany(Post::class, 'user_id');
     }
 
     public function comments()
     {
-        return $this->hasMany(Comment::class, 'comment_id');
+        return $this->hasMany(Comment::class, 'user_id');
     }
 
-    public function likes(){
+    public function likes()
+    {
         return $this->hasMany(Like::class, 'user_id');
     }
 
-    public function media(){
+    public function media()
+    {
         return $this->hasMany(Media::class, 'user_id');
+    }
+
+    public function follower()
+    {
+        return $this->hasMany(Follow::class, 'whoami_user_id');
+    }
+
+    public function following()
+    {
+        return $this->hasMany(Follow::class, 'followed_user_id');
+    }
+
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class, 'to_user_id');
     }
 }

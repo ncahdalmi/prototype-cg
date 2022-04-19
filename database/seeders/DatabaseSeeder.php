@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Comment;
+use App\Models\Follow;
 use App\Models\Like;
 use App\Models\Post;
 use App\Models\PostCategory;
@@ -29,7 +30,8 @@ class DatabaseSeeder extends Seeder
             'slug' => 'menfest',
         ]);
         Post::factory(20)->create();
-        Comment::factory(100)->create();
-        Like::factory(500)->create();
+        // Comment::factory(100)->create();
+        Like::factory(User::all()->count() * (Post::all()->count() * 20 / 100))->create();
+        Follow::factory(User::all()->count() * (User::all()->count() * 50 / 100))->create();
     }
 }
