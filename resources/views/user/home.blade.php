@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-   <div>
+   <div class="rounded-2xl overflow-hidden">
       @include('partials.posting')
    </div>
    <div class="">

@@ -18,7 +18,8 @@
       @csrf
       @method('POST')
       @if (Request::is('menfess'))
-         <input type="text" name="subject" placeholder="Subject">
+         <input type="text" name="subject" placeholder="Subject"
+            class="bg-secondary-2 border-none rounded-xl py-1 px-1 mb-2 w-full placeholder:text-xs">
       @endif
       <input type="hidden" name="is_menfess" value="{{ Request::is('menfess*') ? true : false }}">
       <input id="x" type="hidden" name="content">
