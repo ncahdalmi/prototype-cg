@@ -1,7 +1,7 @@
 <div class="bg-secondary p-4">
    <div class="text-primary-white">
       <div class="flex items-center p-4">
-         <img src="{{ asset('img/' . auth()->user()->profileImg) }}" alt="{{ auth()->user()->profileImg }}"
+         <img src="{{ asset('img/' . auth()->user()->avatar) }}" alt="{{ auth()->user()->username }}"
             class="w-10 block rounded-full mr-4">
          <p class="">
             <span class="block text-xl">
