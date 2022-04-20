@@ -41,7 +41,7 @@ class PostController extends Controller
     {
         return view('user.home', [
             'title' => "MenFess",
-            'posts' => Post::where('post_category_id', 2)->latest()->get(),
+            'posts' => Post::latest()->get(),
             'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
         ]);
     }
@@ -50,6 +50,7 @@ class PostController extends Controller
     {
         return view('user.post', [
             'title' => 'Discussion',
+            'posts' => Post::latest()->get(),
             'post' => $posts,
             'author' => $author,
             // 'comments' => Comment::where('commentable_id', $posts->id)->latest()->get(),
