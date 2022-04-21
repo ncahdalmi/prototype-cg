@@ -33,7 +33,7 @@ Route::get('/menfess', [PostController::class, 'allFess'])->middleware('auth')->
 Route::get('/menfess/{posts}', [PostController::class, 'showFess'])->middleware('auth')->name('menfess.show');
 
 Route::get('/{author:username}/status', [PostController::class, 'all'])->middleware('auth')->name('user.status');
-Route::get('/{author:username}/status/{posts}', [PostController::class, 'show'])->middleware('auth');
+Route::get('/{author:username}/status/{posts}', [PostController::class, 'show'])->middleware('auth')->name('post.show');
 
 // AUTHENTICATION
 Route::get('/', [AuthController::class, 'index'])->middleware('guest')->name('login');
