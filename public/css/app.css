@@ -680,8 +680,8 @@ trix-toolbar {
   left: 50%;
 }
 
-.right-1 {
-  right: 0.25rem;
+.right-0 {
+  right: 0px;
 }
 
 .top-1 {
@@ -690,6 +690,10 @@ trix-toolbar {
 
 .top-0 {
   top: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .left-4 {
@@ -706,14 +710,6 @@ trix-toolbar {
 
 .top-3\/4 {
   top: 75%;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.left-0 {
-  left: 0px;
 }
 
 .z-30 {
@@ -754,11 +750,6 @@ trix-toolbar {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-}
-
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 
 .mt-8 {
@@ -847,18 +838,6 @@ trix-toolbar {
 
 .mt-1 {
   margin-top: 0.25rem;
-}
-
-.-mr-2 {
-  margin-right: -0.5rem;
-}
-
-.-ml-4 {
-  margin-left: -1rem;
-}
-
-.-ml-10 {
-  margin-left: -2.5rem;
 }
 
 .box-border {
@@ -1020,10 +999,6 @@ trix-toolbar {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 .gap-x-2 {
@@ -1206,14 +1181,6 @@ trix-toolbar {
 
 .pr-6 {
   padding-right: 1.5rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
 }
 
 .text-left {
@@ -1421,11 +1388,6 @@ trix-toolbar {
   background-color: rgb(254 254 254 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-secondary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(27 39 48 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(6 20 29 / var(--tw-bg-opacity));
@@ -1445,11 +1407,6 @@ trix-toolbar {
   color: rgb(252 122 248 / var(--tw-text-opacity));
 }
 
-.hover\:text-secondary-2:hover {
-  --tw-text-opacity: 1;
-  color: rgb(40 53 62 / var(--tw-text-opacity));
-}
-
 .hover\:ease-in-out:hover {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1467,11 +1424,6 @@ trix-toolbar {
 .group:hover .group-hover\:text-primary {
   --tw-text-opacity: 1;
   color: rgb(6 20 29 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:text-secondary {
-  --tw-text-opacity: 1;
-  color: rgb(27 39 48 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-primary-white {
@@ -1526,6 +1478,15 @@ trix-toolbar {
 
   .md\:w-\[25\%\] {
     width: 25%;
+  }
+
+  .md\:w-\[20\%\] {
+    width: 20%;
+  }
+
+  .md\:-translate-y-0 {
+    --tw-translate-y: -0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:grid-cols-\[\.75fr_1\.5fr_\.75fr\] {

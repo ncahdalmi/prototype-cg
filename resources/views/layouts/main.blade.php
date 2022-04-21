@@ -47,7 +47,7 @@
             </form>
             <a href="{{ route('user.status', ['author' => auth()->user()]) }}"
                 class="px-2 mr-5 pt-1 bg-secondary-2 rounded-full my-2 hover:bg-primary-white group">
-                <img src="{{ asset('img/' . auth()->user()->avatar) }}" alt=""
+                <img src="{{ asset('img/profile_user/' . auth()->user()->avatar) }}" alt=""
                     class="inline fill-purpink w-7 h-7 mr-2 rounded-full">
                 <p class="inline text-[14px] text-primary-white font-semibold group-hover:text-primary">
                     {{ auth()->user()->username }}</p>
