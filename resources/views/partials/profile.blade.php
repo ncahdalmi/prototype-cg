@@ -1,8 +1,13 @@
 <div class="bg-secondary pb-10 rounded-2xl">
     <div class="w-full relative flex flex-col mb-10">
         <div class="h-32 bg-gradient-to-r from-sky-500 to-indigo-500"></div>
-        <img src="{{ asset('img/profile_user/' . $author->avatar) }}" alt="{{ $author->name }}"
-            class="rounded-full w-[20%] absolute left-1/2 -translate-x-1/2 top-3/4 -translate-y-1/3 sm:-translate-y-3/4 sm:w-[10%] md:w-[25%]">
+        @if (Route::is($author->name . '/status*'))
+            <img src="{{ asset('img/profile_user/' . $author->avatar) }}" alt="{{ $author->name }}"
+                class="rounded-full w-[20%] absolute left-1/2 -translate-x-1/2 top-3/4 -translate-y-1/3 sm:-translate-y-3/4 sm:w-[10%] md:w-[20%] md:-translate-y-0">
+        @else
+            <img src="{{ asset('img/profile_user/' . $author->avatar) }}" alt="{{ $author->name }}"
+                class="rounded-full w-[20%] absolute left-1/2 -translate-x-1/2 top-3/4 -translate-y-1/3 sm:-translate-y-3/4 sm:w-[10%] md:w-[25%]">
+        @endif
     </div>
     <div class="text-center">
         <p class="capitalize ">{{ $author->name }}</p>

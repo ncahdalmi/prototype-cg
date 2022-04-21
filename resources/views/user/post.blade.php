@@ -129,7 +129,7 @@
 @endsection
 
 @section('notifications')
-    @include('notifications')
+    @include('notifications', ['notifs' => $notifs])
 @endsection
 
 @section('sidebar-row-2')

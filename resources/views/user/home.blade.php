@@ -17,7 +17,7 @@
 @endsection
 
 @section('notifications')
-    @include('notifications')
+    @include('notifications', ['notifs' => $notifs])
 @endsection
 
 

@@ -18,7 +18,7 @@ class PostController extends Controller
         return view('user.profile', [
             'title' => 'Post by ' . $author->name,
             'author' => $author,
-            'posts' => $author->posts()->where('post_category_id', 1)->latest()->get(),
+            'posts' => $author->posts()->latest()->get(),
             'media' => $author->media()->latest()->get(),
             'follower' => $author->follower()->latest()->get(),
             'following' => $author->following()->latest()->get(),
@@ -31,9 +31,8 @@ class PostController extends Controller
             'title' => 'Post by @' . $author->username,
             'post' => $posts,
             'author' => $author,
-            // 'comments' => $posts->comments()->latest()->get(),
-            // 'likes' => $posts->likes()->get(),
-            'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest(),
+            'posts' => Post::latest()->get(),
+            'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
         ]);
     }
 
