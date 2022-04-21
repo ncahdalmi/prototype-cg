@@ -86,6 +86,8 @@ return array(
     'Cron\\' => array($vendorDir . '/dragonmantank/cron-expression/src/Cron'),
     'Clockwork\\' => array($vendorDir . '/itsgoingd/clockwork/Clockwork'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
+    'Brunocfalcao\\BladeFeatherIcons\\' => array($vendorDir . '/brunocfalcao/blade-feather-icons/src'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
+    'BladeUI\\Icons\\' => array($vendorDir . '/blade-ui-kit/blade-icons/src'),
     'App\\' => array($baseDir . '/app'),
 );

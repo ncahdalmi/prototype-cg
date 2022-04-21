@@ -39,8 +39,8 @@
                               <x:feather-heart class="block w-4 mr-1" /> <span>Like</span>
                            </button> --}}
                         <button class="z-10">
-                            <x:feather-heart
-                                class="w-6 {{ $post->isLike(auth()->user()->id, $post->id) ? 'bg-pink-600' : 'bg-secondary' }} rounded-full p-[2.5px]" />
+                            {{-- <x:feather-heart
+                                class="w-6 {{ $post->isLike(auth()->user()->id, $post->id) ? 'bg-pink-600' : 'bg-secondary' }} rounded-full p-[2.5px]" /> --}}
                         </button>
                         <span
                             class="bg-white text-primary -ml-2 rounded-r-full min-w-[2rem] text-right px-2">{{ $post->likes->count() >= 1000 ? $post->likes->count() / 1000 . 'k' : $post->likes->count() }}</span>

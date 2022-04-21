@@ -5,11 +5,20 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '9f23b50436f6033c54fb6576720ba32893087b85',
+        'reference' => '3eb29db12b30f90aabfb9f11abe329cf9ab5850b',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'blade-ui-kit/blade-icons' => array(
+            'pretty_version' => '1.2.2',
+            'version' => '1.2.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../blade-ui-kit/blade-icons',
+            'aliases' => array(),
+            'reference' => '012496d145bf4ea7fffd0beed9b9acbf434cc7c8',
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.9.3',
             'version' => '0.9.3.0',
@@ -17,6 +26,15 @@
             'install_path' => __DIR__ . '/../brick/math',
             'aliases' => array(),
             'reference' => 'ca57d18f028f84f777b2168cd1911b0dee2343ae',
+            'dev_requirement' => false,
+        ),
+        'brunocfalcao/blade-feather-icons' => array(
+            'pretty_version' => 'v2.1.0',
+            'version' => '2.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../brunocfalcao/blade-feather-icons',
+            'aliases' => array(),
+            'reference' => '8996efa45baab09ca32217a783ec24de7f116f94',
             'dev_requirement' => false,
         ),
         'cordoval/hamcrest-php' => array(
@@ -388,7 +406,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '9f23b50436f6033c54fb6576720ba32893087b85',
+            'reference' => '3eb29db12b30f90aabfb9f11abe329cf9ab5850b',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
