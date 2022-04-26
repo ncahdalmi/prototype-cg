@@ -33,7 +33,7 @@ class FollowFactory extends Factory
         if ($followed_user_id === $user_id) {
             return $this->generatedFollows(User::all()->random()->id, User::all()->random()->id);
         }
-        // else if (Follow::find('followed_user_id', $followed_user_id)->find('whoami_user_id', $user_id)->get()){
+        // if (Follow::where('followed_user_id', $followed_user_id)->where('whoami_user_id', $user_id)->get()){
         //     return $this->generatedFollows(User::all()->random()->id, User::all()->random()->id);
         // }
         return [
