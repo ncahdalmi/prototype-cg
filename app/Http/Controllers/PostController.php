@@ -20,7 +20,7 @@ class PostController extends Controller
             'author' => $author,
             'posts' => $author->posts()->latest()->get(),
             'media' => $author->media()->latest()->get(),
-            'follower' => $author->follower()->latest()->get(),
+            'followers' => $author->follower()->latest()->get(),
             'following' => $author->following()->latest()->get(),
             'notifs' => Notification::where('to_user_id', auth()->user()->id)->latest()->get(),
         ]);

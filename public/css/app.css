@@ -1092,6 +1092,11 @@ trix-toolbar {
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
+.bg-purpink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 122 248 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1131,6 +1136,10 @@ trix-toolbar {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .py-2 {
@@ -1284,6 +1293,11 @@ trix-toolbar {
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(6 20 29 / var(--tw-text-opacity));
+}
+
+.text-red-200 {
+  --tw-text-opacity: 1;
+  color: rgb(254 202 202 / var(--tw-text-opacity));
 }
 
 .shadow-lg {

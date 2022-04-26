@@ -11,11 +11,11 @@
             @break
 
             @case('follower')
-                <h2>Ini Follower</h2>
+                @include('partials.follower', ['followers' => $followers])
             @break
 
             @case('following')
-                <h3>Ini Following</h3>
+                @include('partials.following', ['following' => $following])
             @break
 
             @default
